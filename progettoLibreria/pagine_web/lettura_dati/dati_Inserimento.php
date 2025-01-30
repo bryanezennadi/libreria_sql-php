@@ -1,15 +1,52 @@
-<?php
-?>
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserimento Libro</title>
+    <link rel="stylesheet" href="../../altre_pagine/styleForm.css"> <!-- Collegamento al CSS -->
 </head>
 <body>
+<?php
+try {
+    // Connessione al database
+    $pdo = new PDO("mysql:host=localhost;dbname=libreria", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-</body>
-</html>
+    // Recupero dei dati dal form
+    $data = $_POST['data'] ?? null;
+    $name = $_POST['name'] ?? null;
+    $genere = $_POST['genere'] ?? null;
+    $autore = $_POST['autore'] ?? null;
+    $prezzo = $_POST['prezzo'] ?? null;
+
+    // Verifica se tutti i dati sono presenti
+    if (empty($data) || empty($name) || empty($genere) || empty($autore) || empty($prezzo)) {
+        echo "<div class='catDespair'>
+            OPERAZIONE NON RIUSCITA, CONTROLLA I DATI INSERITI
+            </div>";
+    } else {
+        // Query di inserimento
+        $sql = "INSERT INTO libri (titolo, autore, genere, prezzo, data) 
+                    VALUES (:name, :autore, :genere, :prezzo, :data)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ':name' => $name,
+            ':autore' => $autore,
+            ':genere' => $genere,
+            ':prezzo' => $prezzo,
+            ':data' => $data
+        ]);
+
+        echo "<div class='no_errore'>
+            OPERAZIONE RIUSCITA
+            </div>";
+    }
+} catch (PDOException $e) {
+    echo "<div class='catDespair'>
+        ERRORE: " . $e->getMessage() . "
+        </div>";
+}
+?>
+
+<button class="bottonespeciale"><a href="../index.php">Cliccami</a></button

@@ -1,0 +1,46 @@
+<?php
+$path_styleHome = "../altre_pagine/style.css";
+$path_styleForm = "../altre_pagine/styleForm.css";
+
+// Funzione per determinare il percorso del CSS
+$path_Style = function () {
+    // Ottieni il nome del file corrente
+    $currentPage = basename($_SERVER['PHP_SELF']);
+
+    // Verifica se la pagina è index.php
+    if ($currentPage === "index.php") {
+        return '../altre_pagine/style.css'; // Percorso CSS per la home
+    } else{
+        return "../altre_pagine/styleForm.css"; // Percorso CSS per altre pagine
+    }
+};
+
+// Funzione per determinare il titolo della pagina
+$titolo = function () {
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    if ($currentPage === "index.php") {
+        return 'HOME'; // Titolo per la home
+    } else if ($currentPage === "elimina.php") {
+        return "Pagina_Cancella"; // Titolo per la pagina elimina
+    }
+    else if ($currentPage === "inserisci.php") {
+        return "Pagina_Insermineto"; // Titolo per la pagina inserisci
+    }
+};
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Link per il CSS dinamico -->
+    <link rel="stylesheet" href="<?= $path_Style() ?>">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Titolo dinamico -->
+    <title><?= $titolo() ?></title> <!-- Corretto: chiamato la funzione con le parentesi -->
+</head>

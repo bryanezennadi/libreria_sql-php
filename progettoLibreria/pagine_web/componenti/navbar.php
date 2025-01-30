@@ -9,19 +9,19 @@
 
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class=<?= isActive('/uda_5^F/progettoLibreria/pagine_web/index.php')?> aria-current="page" href="index.php">Home</a>
+                    <a class=<?= isActive('index.php')?> aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class=<?= isActive('/uda_5^F/progettoLibreria/pagine_web/inserisci.php')?> href="./inserisci.php">Inserisci</a>
+                    <a class=<?= isActive('inserisci.php')?> href="inserisci.php">Inserisci</a>
                 </li>
                 <li class="nav-item">
-                    <a class=<?= isActive('/uda_5^F/progettoLibreria/pagine_web/elimina.php')?> href="./elimina.php">Elimina</a>
+                    <a class=<?= isActive('elimina.php')?> href="elimina.php">Elimina</a>
                 </li>
                 <li class="nav-item">
-                    <a class=<?= isActive('/uda_5^F/progettoLibreria/pagine_web/modifica.php')?> href="./modifica.php">modifica</a>
+                    <a class=<?= isActive('modifica.php')?> href="modifica.php">modifica</a>
                 </li>
                 <li class="nav-item">
-                    <a class=<?= isActive('/uda_5^F/progettoLibreria/pagine_web/visualizza.php')?> href="./visualizza.php">Visualizza</a>
+                    <a class=<?= isActive('visualizza.php')?> href="visualizza.php">Visualizza</a>
                 </li>
 
             </ul>

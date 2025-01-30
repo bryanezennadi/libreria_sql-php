@@ -9,7 +9,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <a href="../inserisci.php" class="card-link">vai alla pagina</a>
+                    <a href="./inserisci.php" class="card-link">vai alla pagina</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <a href="../elimina.php" class="card-link">vai alla pagina</a>
+                    <a href="./elimina.php" class="card-link">vai alla pagina</a>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <a href="../modifica.php" class="card-link">vai alla pagina</a>
+                    <a href="./modifica.php" class="card-link">vai alla pagina</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <a href="../visualizza.php" class="card-link">vai alla pagina</a>
+                    <a href="./visualizza.php" class="card-link">vai alla pagina</a>
                 </div>
             </div>
         </div>

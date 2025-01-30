@@ -1,0 +1,87 @@
+/* Personalizzazione della navbar */
+.custom-navbar {
+    background-color: #fc766d;
+    /* Colore di sfondo più scuro */
+}
+
+.custom-navbar .navbar-brand {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-linkAttivo{
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #00ff40;
+
+}
+.nav-linkAttivo:hover{
+    color: #00ff40;
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: #ecf0f1;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: #ecf0f1;
+}
+
+/* Personalizzazione dello stato attivo */
+.custom-navbar .navbar-nav .nav-linkAttivo {
+    color: #00ff40;
+    font-weight: 600;
+}
+
+#testo_footer {
+    text-align: center;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tutteCards {
+    margin-top: 3%;
+}
+
+.row {
+    display: flex;
+    align-items: stretch; /* Assicura che tutte le colonne abbiano la stessa altezza */
+}
+
+.col {
+    display: flex;
+    justify-content: stretch; /* Assicura che le card occupino tutta l'altezza disponibile */
+}
+
+.regolaAltezzaCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* La card occupa tutta l'altezza disponibile della colonna */
+}
+
+.card-body {
+    flex-grow: 1; /* Fa sì che il contenuto della card si espanda per riempire lo spazio disponibile */
+}

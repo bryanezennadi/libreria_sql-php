@@ -18,13 +18,14 @@ $path_Style = function () {
 // Funzione per determinare il titolo della pagina
 $titolo = function () {
     $currentPage = basename($_SERVER['PHP_SELF']);
-    if ($currentPage === "index.php") {
-        return 'HOME'; // Titolo per la home
-    } else if ($currentPage === "elimina.php") {
-        return "Pagina_Cancella"; // Titolo per la pagina elimina
-    }
-    else if ($currentPage === "inserisci.php") {
-        return "Pagina_Insermineto"; // Titolo per la pagina inserisci
+    switch($currentPage) {
+
+        case "index.php": return 'HOME';
+        case "inserisci.php": return 'Pagina_Insermineto';
+        case "elimina.php": return 'Pagina_Cancella';
+        case "visualizza.php": return 'Pagina_Visualizza';
+        case "modifica.php": return 'Pagina_Modifica';
+        default: return 'pagina non trovata';
     }
 };
 ?>

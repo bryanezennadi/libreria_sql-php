@@ -134,8 +134,21 @@ Form button:hover {
     background-color: green;
     color: black;
 }
-.bottonespeciale{
-    width: auto;
-    background-color: black;
+.bottonespeciale {
+    display: block; /* Permette l'uso di margin auto */
+    width: fit-content; /* Adatta la larghezza al contenuto */
+    margin: 20px auto; /* Lo centra orizzontalmente */
+    padding: 10px 20px; /* Migliora la leggibilità */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px; /* Arrotonda i bordi */
+    cursor: pointer;
+    background-color: #ff6b6b; /* Rosso corallo */
     color: white;
+    transition: background-color 0.3s ease;
+}
+
+.bottonespeciale:hover {
+    background-color: #d43f3f; /* Rosso più scuro per effetto hover */
 }
